@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício - Bootstrap Avançado</title>
+    <!-- Adicionando fontes para seu projeto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Noto+Sans:ital,wght@0,200;0,300;0,400;1,600&display=swap" rel="stylesheet">
+    <!-- Alterado o seu arquivo local para uma referencia do proprio bootstrap, diminuindo o load do seu projeto -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Adicionado referencia para os icones no rodape -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Sua customizacao-->
+    <link rel="stylesheet" href="./main.css">
+    <!--<link rel="stylesheet" href="./responsivo.css">-->
+</head>
+
+<body>
+
+    <!-- Barra de Navegaçao -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top custom-bg">
+            <div class="container d-flex">
+                <a class="navbar-brand" href="#">
+                    <h1>Loja Confiantec</h1>
+                </a>
+                <!-- Adicionando um menu "hamburguer" para responsividade -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="#products">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#promotions">Promoções</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#credit-card">Cartão</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Carousel classico -->
+    <div id="carouselFrontPage" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./imagens/sale.jpg" class="d-block w-100" alt="Promoções">
+            </div>
+            <div class="carousel-item">
+                <img src="./imagens/products.jpg" class="d-block w-100" alt="Produtos">
+            </div>
+            <div class="carousel-item">
+                <img src="./imagens/cards.jpg" class="d-block w-100" alt="Faça seu Cartão">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselFrontPage" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselFrontPage" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    </div>
+
+    <!-- Section Products utilizando Cards -->
+    <section id="products" class="mt-4">
+        <div class="container mt-5">
+            <h2>Produtos</h2>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card">
+                        <img src="./imagens/sale.jpg" class="card-img-top" alt="Promoções">
+                        <div class="card-body">
+                            <h5 class="card-title">Promoções</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card">
+                        <img src="./imagens/products.jpg" class="card-img-top" alt="Produtos">
+                        <div class="card-body">
+                            <h5 class="card-title">Produtos</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card">
+                        <img src="./imagens/cards.jpg" class="card-img-top" alt="Faça seu Cartão">
+                        <div class="card-body">
+                            <h5 class="card-title">Faça seu Cartão</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section promocoes utilizando tabs -->
+    <section id="promotions" class="mt-4">
+        <div class="container mt-5">
+            <h2>Menu de Promoções</h2>
+            <div class="d-flex flex-column flex-md-row mt-4">
+                <div class="nav flex-column nav-pills me-3 mb-3" id="v-pills-tab" role="tablist"
+                    aria-orientation="vertical">
+                    <button class="nav-link active" id="v-pills-promotion1-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-promotion1" type="button" role="tab" aria-controls="v-pills-promotion1"
+                        aria-selected="true">20% off</button>
+                    <button class="nav-link" id="v-pills-promotion2-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-promotion2" type="button" role="tab" aria-controls="v-pills-promotion2"
+                        aria-selected="false">30% off</button>
+                    <button class="nav-link" id="v-pills-promotion3-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-promotion3" type="button" role="tab" aria-controls="v-pills-promotion3"
+                        aria-selected="false">Novidade</button>
+                    <button class="nav-link" id="v-pills-promotion4-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-promotion4" type="button" role="tab" aria-controls="v-pills-promotion4"
+                        aria-selected="false">Destaque</button>
+                </div>
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-promotion1" role="tabpanel"
+                        aria-labelledby="v-pills-promotion1-tab">
+                        <div class="row">
+                            <!-- Card 1 para Promocao 1 -->
+                            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                <div class="card">
+                                    <img src="./imagens/sale.jpg" class="card-img-top" alt="Promoções">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Promoções</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 2 para Promocao 1 -->
+                            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                <div class="card">
+                                    <img src="./imagens/sale.jpg" class="card-img-top" alt="Promoções">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Promoções</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 3 para Promocao 1 -->
+                            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                <div class="card">
+                                    <img src="./imagens/sale.jpg" class="card-img-top" alt="Promoções">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Promoções</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-promotion2" role="tabpanel"
+                        aria-labelledby="v-pills-promotion2-tab">
+                        <div class="row">
+                            <!-- Card 1 para Promocao 2 -->
+                            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                <div class="card">
+                                    <img src="./imagens/sale.jpg" class="card-img-top" alt="Promoções">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Promoções</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 2 para Promocao 2 -->
+                            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                <div class="card">
+                                    <img src="./imagens/sale.jpg" class="card-img-top" alt="Promoções">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Promoções</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 3 para Promocao 2 -->
+                            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                <div class="card">
+                                    <img src="./imagens/sale.jpg" class="card-img-top" alt="Promoções">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Promoções</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-promotion3" role="tabpanel"
+                        aria-labelledby="v-pills-promotion3-tab">
+                        <div class="row">
+                            <!-- Card 1 para Promocao 3 -->
+                            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                <div class="card">
+                                    <img src="./imagens/sale.jpg" class="card-img-top" alt="Promoções">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Promoções</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 2 para Promocao 3 -->
+                            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                <div class="card">
+                                    <img src="./imagens/sale.jpg" class="card-img-top" alt="Promoções">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Promoções</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 3 para Promocao 3 -->
+                            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                <div class="card">
+                                    <img src="./imagens/sale.jpg" class="card-img-top" alt="Promoções">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Promoções</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-promotion4" role="tabpanel"
+                        aria-labelledby="v-pills-promotion4-tab">
+                        <div class="row">
+                            <!-- Card 1 para Promocao 4 -->
+                            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                <div class="card">
+                                    <img src="./imagens/sale.jpg" class="card-img-top" alt="Promoções">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Promoções</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 2 para Promocao 4 -->
+                            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                <div class="card">
+                                    <img src="./imagens/sale.jpg" class="card-img-top" alt="Promoções">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Promoções</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 3 para Promocao 4 -->
+                            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                <div class="card">
+                                    <img src="./imagens/sale.jpg" class="card-img-top" alt="Promoções">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Promoções</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section contato com um mapa fake-->
+    <section id="contact-us" class="my-4">
+        <div class="container">
+            <h2>Entre em contato</h2>
+            <div class="row mt-4">
+                <div class="col-md-5">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="name" placeholder="Seu Nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="Seu E-mail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="comments" class="form-label">Comentarios</label>
+                            <textarea class="form-control" id="comments" rows="4" placeholder="Tem algo a comentar?"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+                <div class="col-md-7">
+                    <iframe class="m-4"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19650.151432752!2d-74.00665735130974!3d40.71215350464798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2594c278bea249%3A0x9bfbf8981b9608e1!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1622002442936!5m2!1sen!2sus"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodape da nossa pagina -->
+    <footer class="custom-bg text-light p-3 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-unstyled list-inline social-icons">
+                        <li class="list-inline-item">
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="bi bi-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                        </li>
+                    </ul>
+                    <p>&copy; Alamir Rangel | Todos direitos reservados</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

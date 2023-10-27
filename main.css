@@ -1,0 +1,41 @@
+/* O codigo abaixo pode ser substituido aplicando as classes nas imagens "d-block w-100" 
+.carousel-item img {
+    width: 100%;
+    display: block;
+    margin: auto;
+}*/
+/* Nao ha a necessidade de sobreescrevermos a classe col-4 
+.col-4 {
+    margin-top: 60px;
+    margin-bottom: 60px;
+} */
+
+body {
+    font-family: 'Noto Sans', serif;
+}
+
+header, header h1 {
+    font-family: 'Roboto', serif;
+    text-transform: capitalize;
+}
+header .nav-item a {
+    color: #fff;
+    font-family: 'Roboto', serif;
+    text-transform: uppercase;
+}
+
+
+/* Podemos utilizar a classe  fixed-top para mantermos no topo, sendo assim podemos reduzir as propriedades escritas e
+    utilizarmos a classe custom-bg (background-customizado) para alterarmos as opcoes de cor*/
+.custom-bg {
+    background-color: #1b88b3;
+} 
+.carousel-inner {
+    max-height: 620px;
+}
+
+footer a {
+    color:black;
+    font-size: 1.2rem;
+}
+
