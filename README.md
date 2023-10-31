@@ -2,6 +2,9 @@
 
 Este é um projeto simples de site para a fictícia "Loja Confiantec" criado em HTML e Bootstrap. O projeto inclui barra de navegação, carrossel, seções de produtos e promoções, formulário de contato e mapa falso para a seção “Fale Conosco”.
 
+## Product Image
+![Imagem da pagina](https://raw.githubusercontent.com/onlybruno/ala-website/docs/docs/main_page.jpg)
+
 ## Project Structure
 
 O projeto está organizado da seguinte forma:
