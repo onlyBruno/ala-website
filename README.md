@@ -5,6 +5,10 @@ Este é um projeto simples de site para a fictícia "Loja Confiantec" criado em 
 ## Product Image
 ![Imagem da pagina](https://raw.githubusercontent.com/onlybruno/ala-website/docs/docs/main_page.jpg)
 
+
+## Live-version 
+Voce pode acessar uma versão [live](https://ala-website-wine.vercel.app/) da página [aqui](https://ala-website-wine.vercel.app/).
+
 ## Project Structure
 
 O projeto está organizado da seguinte forma:
